@@ -3,6 +3,15 @@ import { useState, useEffect, useRef } from "react";
 import GalleryGrid from "./GalleryGrid";
 import ResortGrid from "./ResortGrid";
 
+function gtagConversion() {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: "AW-18121892684/FmmFCNGnjKMcEMzGmMFD",
+      transaction_id: "",
+    });
+  }
+}
+
 /* ─── Banner animations (injected once) ─────────────────── */
 const BLINK_STYLE = `
 @keyframes mf-border-spin {
@@ -1047,6 +1056,7 @@ export default function PageClient() {
               href="https://lin.ee/xrAU8PC"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={gtagConversion}
               style={{
                 display: "inline-flex", alignItems: "center", gap: "0.5rem",
                 padding: "1rem 2.5rem", borderRadius: 999,
@@ -1369,7 +1379,7 @@ export default function PageClient() {
 
           {/* CTA */}
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
-            <a href="tel:0952411833" style={{
+            <a href="tel:0952411833" onClick={gtagConversion} style={{
               display: "inline-flex", alignItems: "center", gap: "0.5rem",
               padding: "0.9rem 2rem", borderRadius: 999,
               background: "linear-gradient(135deg, #16a34a, #22c55e)",
@@ -1378,7 +1388,7 @@ export default function PageClient() {
             }}>
               {t.saleCtaCall}
             </a>
-            <a href="https://lin.ee/xrAU8PC" target="_blank" rel="noopener noreferrer" style={{
+            <a href="https://lin.ee/xrAU8PC" target="_blank" rel="noopener noreferrer" onClick={gtagConversion} style={{
               display: "inline-flex", alignItems: "center", gap: "0.5rem",
               padding: "0.9rem 2rem", borderRadius: 999,
               background: "linear-gradient(135deg, #0ea5e9, #38bdf8)",
@@ -1402,6 +1412,7 @@ export default function PageClient() {
               href="https://lin.ee/xrAU8PC"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={gtagConversion}
               style={{ textDecoration: "none", display: "inline-block" }}
             >
               <LedBillboard text={t.galleryCta} />
