@@ -117,7 +117,7 @@ function injectBlink() {
 const GOLD = "#c9a227";
 const NAVY = "#0f172a";
 const BLUE = "#1d4ed8";
-const WAREHOUSE_BOOKING_URL = "https://strong-dory-enabled.ngrok-free.app/m-factory/booking ";
+const WAREHOUSE_BOOKING_URL = "https://strong-dory-enabled.ngrok-free.app/m-factory ";
 
 /* ─── Scroll-reveal hook ─────────────────────────────────── */
 function useReveal(threshold = 0.1) {
