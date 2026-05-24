@@ -2,7 +2,33 @@ import "./globals.css";
 import Script from "next/script";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://m-factoryandresort.com";
+import Link from "next/link";
 
+<div className="flex gap-2">
+  {/* ภาษาไทย */}
+  <Link
+    href="https://strong-dory-enabled.ngrok-free.app/m-factory/booking"
+    target="_blank"
+  >
+    <button>จองคิว</button>
+  </Link>
+
+  {/* English */}
+  <Link
+    href="https://strong-dory-enabled.ngrok-free.app/m-factory/booking"
+    target="_blank"
+  >
+    <button>Booking</button>
+  </Link>
+
+  {/* 中文 */}
+  <Link
+    href="https://strong-dory-enabled.ngrok-free.app/m-factory/booking"
+    target="_blank"
+  >
+    <button>预约</button>
+  </Link>
+</div>
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
