@@ -117,6 +117,7 @@ function injectBlink() {
 const GOLD = "#c9a227";
 const NAVY = "#0f172a";
 const BLUE = "#1d4ed8";
+const WAREHOUSE_BOOKING_URL = "https://strong-dory-enabled.ngrok-free.app/m-factory/booking/page.jsx";
 
 /* ─── Scroll-reveal hook ─────────────────────────────────── */
 function useReveal(threshold = 0.1) {
@@ -839,6 +840,24 @@ export default function PageClient() {
               </a>
             ))}
             <a
+              href={WAREHOUSE_BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={gtagConversion}
+              style={{
+                padding: "0.6rem 1.4rem",
+                borderRadius: 999,
+                background: "linear-gradient(135deg, #dc2626 0%, #f59e0b 100%)",
+                color: "#fff", fontSize: "1rem", fontWeight: 800,
+                textDecoration: "none",
+                boxShadow: "0 4px 16px rgba(220,38,38,0.24)",
+                border: "1px solid rgba(255,255,255,0.45)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              จองมัดจำเช่าโกดัง
+            </a>
+            <a
               href="#contact"
               style={{
                 padding: "0.6rem 1.4rem",
@@ -926,11 +945,14 @@ export default function PageClient() {
               { label: t.navServices, href: "#services" },
               { label: t.navGallery, href: "#gallery" },
               { label: t.navResort, href: "#resort" },
+              { label: "จองมัดจำเช่าโกดัง", href: WAREHOUSE_BOOKING_URL, external: true },
               { label: t.navContact, href: "#contact" },
-            ].map(({ label, href }) => (
+            ].map(({ label, href, external }) => (
               <a
                 key={href}
                 href={href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
                 onClick={() => setMenuOpen(false)}
                 style={{
                   color: NAVY,
@@ -1051,6 +1073,22 @@ export default function PageClient() {
               }}
             >
               {t.heroCta} →
+            </a>
+            <a
+              href={WAREHOUSE_BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={gtagConversion}
+              style={{
+                display: "inline-flex", alignItems: "center", gap: "0.5rem",
+                padding: "1rem 2.5rem", borderRadius: 999,
+                background: "linear-gradient(135deg, #dc2626 0%, #f59e0b 100%)",
+                color: "#fff", fontWeight: 900, fontSize: "1.1rem",
+                textDecoration: "none",
+                boxShadow: "0 8px 32px rgba(220,38,38,0.35), 0 2px 8px rgba(0,0,0,0.2)",
+              }}
+            >
+              จองมัดจำเช่าโกดัง
             </a>
             <a
               href="https://lin.ee/xrAU8PC"
