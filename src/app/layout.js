@@ -10,7 +10,7 @@ import Link from "next/link";
     href="https://strong-dory-enabled.ngrok-free.app/m-factory/booking"
     target="_blank"
   >
-    <button>จองคิว</button>
+    <button>จองเช่าโกดังโรงงาน</button>
   </Link>
 
   {/* English */}
